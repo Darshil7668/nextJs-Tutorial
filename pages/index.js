@@ -12,12 +12,15 @@ export default function Home() {
       Home Page <br />
       <Link href={'/blogs'}>
         Go To Blogs
-      </Link> <br/>
+      </Link> <br />
       <Link href={'/products'}>
         Go To Products
-      </Link> <br/>
+      </Link> <br />
       <Link href={'/posts'}>
         Go To posts
+      </Link>
+      <Link href={'/news'}>
+        News
       </Link>
     </>
   )
