@@ -18,9 +18,9 @@ export default function Home() {
       </Link> <br />
       <Link href={'/posts'}>
         Go To posts
-      </Link>
+      </Link> <br/>
       <Link href={'/news'}>
-        News
+       Go to News
       </Link>
     </>
   )
