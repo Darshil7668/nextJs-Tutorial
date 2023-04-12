@@ -19,10 +19,7 @@ const PageId = ({ post }) => {
     )
 }
 
-
 export default PageId
-
-
 
 export async function getStaticPaths() {
     const response = await fetch(`http://localhost:4000/news/`)
