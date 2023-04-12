@@ -4,7 +4,7 @@ const Events = ({ articles, category }) => {
     console.log(articles);
     return (
         <>
-            news for {category} category <br />
+            Events for {category} category <br />
             {
                 articles.map((data) => {
                     return (

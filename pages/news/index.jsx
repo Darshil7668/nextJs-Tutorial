@@ -1,10 +1,14 @@
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import useSWR from 'swr';
 
-const News = ({ data }) => {
+const News = ({data}) => {
+  
     const [searchText, setSearchText] = useState()
     const [formData, setFormData] = useState({});
+
+
+
 
     const handleSearchText = (e) => {
         setSearchText(e.target.value)
@@ -52,7 +56,7 @@ const News = ({ data }) => {
             </form>
             {
                 data.map((data) => {
-                    return (<><h1 key={data.id}>{data.id} {data.title} | {data.category}</h1> <button onClick={()=>handleDelete(data.id)}>Delete</button></>)
+                    return (<><h1 key={data.id}>{data.id} {data.title} | {data.category}</h1> <button onClick={() => handleDelete(data.id)}>Delete</button></>)
                 })
             }
         </>
@@ -68,7 +72,7 @@ export async function getServerSideProps() {
     return {
         props: {
             data
-        }
+        },
     }
 }
 
