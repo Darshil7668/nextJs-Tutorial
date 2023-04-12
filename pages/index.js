@@ -18,9 +18,12 @@ export default function Home() {
       </Link> <br />
       <Link href={'/posts'}>
         Go To posts
-      </Link> <br/>
+      </Link> <br />
+      <Link href={'/events'}>
+        Go To Events
+      </Link> <br />
       <Link href={'/news'}>
-       Go to News
+        Go to News
       </Link>
     </>
   )
