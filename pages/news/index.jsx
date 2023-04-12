@@ -44,7 +44,7 @@ const News = ({ data }) => {
             <div>news</div>
             <input type="text" placeholder='search Category' onChange={handleSearchText} /> <br />
             <Link href={`/news/${searchText}`}>Search</Link> <br /> <br />
-            <form action="" onSubmit={handleSubmit}>
+            <form action="/blogs" onSubmit={handleSubmit}>
                 <input type="text" name="title" onChange={handleInputChange} placeholder='Name' />
                 <input type="text" name="category" onChange={handleInputChange} placeholder='category' />
                 <input type="text" name="description" onChange={handleInputChange} placeholder='description' />
@@ -58,7 +58,6 @@ const News = ({ data }) => {
         </>
     )
 }
-
 export default News
 
 export async function getServerSideProps() {

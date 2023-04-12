@@ -1,3 +1,4 @@
+// dynamic search routing through API using getServerSideProps
 import React from 'react'
 
 const category = ({ articles, category }) => {
@@ -16,11 +17,8 @@ const category = ({ articles, category }) => {
 }
 
 export async function getServerSideProps(contex) {
-    const { params, req, res,query} = contex
-    console.log(req.headers.cookie);
+    const { params} = contex
     const { category } = params
-    console.log(query);
-    res.setHeader(`Set-Cookie`, [`category=${category}`])
     const response = await fetch(`http://localhost:4000/news?category=${category}`)
     const data = await response.json()
 

@@ -12,6 +12,7 @@ const postId = ({ post }) => {
 }
 
 export default postId
+
 export async function getStaticPaths() {
     const respons = await fetch('https://jsonplaceholder.typicode.com/posts')
     const data = await respons.json()
