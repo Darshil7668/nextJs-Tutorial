@@ -1,11 +1,9 @@
-// dynamic search routing through API using getStaticPath
-
-import React from 'react'
+// dynamic search routing through API using getStatiProps
 
 const PageId = ({ post }) => {
-    console.log(post)
     return (
         <div>
+
             {
                 post.map((data) => {
                     return (

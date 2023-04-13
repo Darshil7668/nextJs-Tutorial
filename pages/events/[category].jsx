@@ -1,9 +1,14 @@
+import Head from 'next/head';
 import React from 'react'
 
 const Events = ({ articles, category }) => {
     console.log(articles);
     return (
         <>
+            <Head>
+
+                <title>Events</title>
+            </Head>
             Events for {category} category <br />
             {
                 articles.map((data) => {
