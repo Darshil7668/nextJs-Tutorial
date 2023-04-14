@@ -6,6 +6,7 @@ const Events = ({ data }) => {
   const [fetchedData, setFetchedData] = useState(data)
   const { theme, setTheme } = useTheme()
 
+
   const handleFetch = async () => {
 
     const response = await fetch(`http://localhost:4000/events?category=${searchText}`)
@@ -36,7 +37,7 @@ const Events = ({ data }) => {
         {
           fetchedData.map((val) => {
             return (<>
-              <h2>{val.id} {val.title} | {val.category}</h2>
+              <h2 key={val.id}>{val.id} {val.title} | {val.category}</h2>
             </>)
           })
         }

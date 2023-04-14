@@ -2,9 +2,9 @@ import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import useSWR from 'swr';
 
-const News = ({data}) => {
-  
-    const [searchText, setSearchText] = useState()
+const News = ({ data }) => {
+
+    const [searchText, setSearchText] = useState(undefined)
     const [formData, setFormData] = useState({});
 
 
@@ -13,6 +13,7 @@ const News = ({data}) => {
     const handleSearchText = (e) => {
         setSearchText(e.target.value)
     }
+    console.log(searchText);
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -47,7 +48,7 @@ const News = ({data}) => {
         <>
             <div>news</div>
             <input type="text" placeholder='search Category' onChange={handleSearchText} /> <br />
-            <Link href={`/news/${searchText}`}>Search</Link> <br /> <br />
+            <Link href={searchText === 'undefined' ? '/news' : `news/${searchText}`}>Search</Link> <br /> <br />
             <form action="/blogs" onSubmit={handleSubmit}>
                 <input type="text" name="title" onChange={handleInputChange} placeholder='Name' />
                 <input type="text" name="category" onChange={handleInputChange} placeholder='category' />

@@ -13,7 +13,7 @@ const Events = ({ articles, category }) => {
             {
                 articles.map((data) => {
                     return (
-                        <> <h1> {data.title} <br />{data.description}<br /> Category: {category} </h1> <hr /> </>
+                        <> <h1 key={data.id}> {data.title} <br />{data.description}<br /> Category: {category} </h1> <hr /> </>
                     )
                 })
             }
